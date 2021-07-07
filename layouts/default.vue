@@ -1,5 +1,6 @@
 <template>
-  <div id="main" class="w-screen h-screen">
+  <div id="main" class="w-screen h-screen overflow-hidden">
+
     <header>
       <div class="flex items-center space-x-3">
         <User class="icon" />
@@ -11,10 +12,19 @@
         <Leave class="icon"/>
       </div>
     </header>
-    <Nuxt class="absolute h-full w-full z-0 pt-10 pb-16"/>
+
+    <div class="absolute h-full w-screen pt-10 pb-12 top-0 left-0">
+      <div class="relative w-screen h-full">
+        <DesktopIcon/>
+      </div>
+    </div>
+
+    <Nuxt class="absolute h-full w-full z-10 pt-10 pb-16"/>
+
     <footer>
       <h2>Bonjour</h2>
     </footer>
+
   </div>
 </template>
 
@@ -23,13 +33,15 @@ import Wifi from "@/components/icons/Wifi";
 import Sound from "~/components/icons/Sound";
 import Leave from "~/components/icons/Leave";
 import User from "~/components/icons/User";
+import DesktopIcon from "../components/DesktopIcon";
 
 export default {
   components: {
     Wifi,
     Sound,
     Leave,
-    User
+    User,
+    DesktopIcon
   }
 }
 </script>
@@ -37,6 +49,7 @@ export default {
 <style scoped>
   #main {
     background-image: url("https://images.unsplash.com/photo-1479030160180-b1860951d696?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ashim-d-silva-WeYamle9fDM-unsplash.jpg");
+    @apply bg-cover bg-center;
   }
   header, footer {
     @apply fixed z-10 bg-white bg-opacity-75 px-4 w-screen;
