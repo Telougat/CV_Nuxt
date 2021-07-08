@@ -12,7 +12,7 @@
         icon="Briefcase"
         title="Expériences"
         link="/home"
-        x="1.9%"
+        x="2%"
         y="18.5%"
       />
     </div>

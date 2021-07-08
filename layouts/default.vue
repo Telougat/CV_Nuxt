@@ -17,7 +17,7 @@
 
     <DesktopIcons/>
 
-    <Nuxt class="absolute h-full w-full pt-10 pb-16"/>
+    <Nuxt class="absolute h-full w-full pt-8"/>
 
 <!--    <footer>
       <h2>Bonjour</h2>
