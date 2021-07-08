@@ -1,23 +1,25 @@
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
-    <div class="fixed top-0 w-screen flex justify-end bg-white px-6 bg-opacity-50">
-      <p class="text-lg text-gray-700 font-bold">{{ time }}</p>
+    <div class="fixed top-0 flex items-center justify-end z-50 h-8 bg-white bg-opacity-75 px-4 w-screen space-x-3">
+      <Locked class="h-5 text-gray-700 -mt-0.5"/>
+      <p class="text-lg text-gray-700 font-bold tracking-wider select-none">{{ time }}</p>
     </div>
-    <div class="flex flex-col items-center bg-white py-16 px-20 rounded-xl bg-opacity-60 cursor-pointer" @click="$router.push('/home')">
+    <div class="flex flex-col items-center p-5 rounded-xl cursor-pointer" @click="$router.push('/home')">
       <div class="w-40 h-40 rounded-full face"></div>
-      <h1 class="mt-10 text-gray-700 font-bold italic">Lorenzo LAGOUTTE</h1>
-      <Enter class="h-16 mt-8 text-gray-700 fill-current"/>
+      <h1 class="mt-6 text-gray-700 font-bold italic select-none">Lorenzo LAGOUTTE</h1>
     </div>
   </div>
 </template>
 
 <script>
 import Enter from "~/components/icons/Enter";
+import Locked from "../components/icons/Locked";
 
 export default {
   name: "index",
   layout: 'login',
   components: {
+    Locked,
     Enter
   },
   data: () => {

@@ -1,9 +1,9 @@
 <template>
-  <div class="z-20 w-full h-full flex justify-center items-center">
-    <div class="w-4/5 h-4/5 bg-gray-100 rounded-xl">
+  <div @click="clicked" class="w-full h-full flex justify-center items-center">
+    <div class="z-20 w-4/5 h-4/5 bg-gray-100 rounded-xl">
       <div class="h-10 bg-gray-700 bg-opacity-50 flex items-center justify-between px-4 rounded-t-xl">
         <div class="flex space-x-2">
-          <div class="pin red flex items-center justify-center"><Close class="close hidden text-black fill-current" /></div>
+          <NuxtLink to="/home" class="pin red flex items-center justify-center"><Close class="close hidden text-black fill-current" /></NuxtLink>
           <div class="pin yellow"><Close class="close hidden text-black fill-current" /></div>
           <div class="pin green"><Close class="close hidden text-black fill-current" /></div>
         </div>
@@ -30,6 +30,11 @@ export default {
     title: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    clicked(event) {
+      console.log(event);
     }
   }
 }
