@@ -1,12 +1,13 @@
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
     <div class="fixed top-0 flex items-center justify-end z-50 h-8 bg-white bg-opacity-75 px-4 w-screen space-x-3">
-      <Locked class="h-5 text-gray-700 -mt-0.5"/>
+      <Locked class="h-5 text-gray-700"/>
       <p class="text-lg text-gray-700 font-bold tracking-wider select-none">{{ time }}</p>
     </div>
     <div class="flex flex-col items-center p-5 rounded-xl cursor-pointer" @click="$router.push('/home')">
       <div class="w-40 h-40 rounded-full face"></div>
       <h1 class="mt-6 text-gray-700 font-bold italic select-none">Lorenzo LAGOUTTE</h1>
+      <p class="bg-white bg-opacity-75 px-2 py-1 text-gray-700 italic mt-8 text-xl">Entrer</p>
     </div>
   </div>
 </template>

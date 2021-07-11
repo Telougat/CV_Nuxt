@@ -1,19 +1,25 @@
 <template>
-  <div class="absolute h-full w-screen pt-8 pb-12 top-0 left-0 z-20 overflow-hidden">
-    <div @mouseleave="stopDragging" @mouseup="stopDragging" @mousemove="updateCursorPosition" class="relative w-screen h-full">
+  <div class="absolute h-full w-screen pt-8 top-0 left-0 z-20 overflow-hidden">
+    <div @mouseleave="stopDragging" @mouseup="stopDragging" @mousemove="updateCursorPosition" class="relative w-screen h-full flex flex-col space-y-6 p-6">
       <DesktopIcon
-        icon="Academic"
-        title="Formations"
-        link="/presentation"
-        x="2%"
-        y="3%"
+        icon="UserCircle"
+        title="Présentation"
+        link="presentation"
       />
       <DesktopIcon
-        icon="Briefcase"
-        title="Expériences"
-        link="/home"
-        x="2%"
-        y="18.5%"
+        icon="CV"
+        title="CV"
+        link="/resume"
+      />
+      <DesktopIcon
+        icon="Mail"
+        title="E-Mail"
+        link="mailto:lorenzo@lagoutte.dev"
+      />
+      <DesktopIcon
+        icon="Github"
+        title="Github"
+        link="https://github.com/Telougat"
       />
     </div>
   </div>

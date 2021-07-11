@@ -2,18 +2,18 @@
   <div @click="$router.push('/home')" @mousemove="updateCursorPosition" @mouseup="setDraggingState(false)" class="w-full h-full overflow-x-hidden z-30">
     <div class="relative w-full h-full flex justify-center items-center overflow-hidden">
       <transition name="fade" appear>
-        <div @click="stopPropagation" ref="window-frame" :class="fullscreen ? 'w-full h-full' : 'w-4/5 h-4/5'" class="bg-gray-100 rounded-xl">
-          <div @mousedown="setDraggingState(true)" class="h-10 bg-gray-400 bg-opacity-50 flex items-center justify-between px-4 rounded-t-xl">
+        <div @click="stopPropagation" ref="window-frame" :class="size" class="bg-gray-100 rounded-xl flex flex-col">
+          <div @mousedown="setDraggingState(true)" class="h-10 bg-gray-400 bg-opacity-50 flex flex-shrink-0 items-center justify-between px-4 rounded-t-xl">
             <div class="flex space-x-2">
               <NuxtLink to="/home" class="pin red flex items-center justify-center"><Close class="close hidden text-white fill-current" /></NuxtLink>
-              <div @click="setFullscreen" class="pin yellow"><Close class="close hidden text-black fill-current" /></div>
-              <div class="pin green"><Close class="close hidden text-black fill-current" /></div>
+              <div class="pin yellow"></div>
+              <div class="pin green"></div>
             </div>
             <div>
-              <h2 class="select-none">{{ title }}</h2>
+              <h2 class="select-none italic text-gray-700">{{ title }}</h2>
             </div>
           </div>
-          <div class="overflow-y-auto overflow-x-hidden">
+          <div :class="background" class="overflow-y-auto overflow-x-hidden h-full w-full">
             <slot></slot>
           </div>
         </div>
@@ -34,6 +34,12 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    size: {
+      type: String,
+    },
+    background: {
+      type: String,
     }
   },
   data: () => {
@@ -53,21 +59,12 @@ export default {
         y: null
       },
       windowFrame: null,
-      fullscreen: false,
     }
   },
   mounted() {
     this.windowFrame = this.$refs['window-frame'];
   },
   methods: {
-    setFullscreen() {
-      this.fullscreen = !this.fullscreen;
-
-      if (this.fullscreen) {
-        this.$refs['window-frame'].style.left = "0px";
-        this.$refs['window-frame'].style.top = "0px";
-      }
-    },
     stopPropagation(event) {
       event.stopPropagation();
     },
