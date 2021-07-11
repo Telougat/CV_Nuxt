@@ -6,7 +6,7 @@
     </div>
     <div class="flex flex-col items-center p-5 rounded-xl cursor-pointer" @click="$router.push('/home')">
       <div class="w-40 h-40 rounded-full face"></div>
-      <h1 class="mt-6 text-gray-700 font-bold italic select-none">Lorenzo LAGOUTTE</h1>
+      <h1 class="mt-6 text-white font-bold italic select-none">Lorenzo LAGOUTTE</h1>
       <p class="bg-white bg-opacity-75 px-2 py-1 text-gray-700 italic mt-8 text-xl">Entrer</p>
     </div>
   </div>
@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
   .face {
-    background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=albert-dera-ILip77SbmOE-unsplash.jpg&w=1920");
+    background-image: url("../assets/lorenzo-pp.jpg");
     @apply bg-cover bg-top;
   }
 </style>

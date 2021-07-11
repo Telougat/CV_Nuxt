@@ -13,7 +13,7 @@
               <h2 class="select-none italic text-gray-700">{{ title }}</h2>
             </div>
           </div>
-          <div :class="background" class="overflow-y-auto overflow-x-hidden h-full w-full">
+          <div :class="background" class="overflow-y-auto overflow-x-hidden h-full w-full rounded-b-xl">
             <slot></slot>
           </div>
         </div>

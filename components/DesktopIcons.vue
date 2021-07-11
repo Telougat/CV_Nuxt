@@ -14,12 +14,17 @@
       <DesktopIcon
         icon="Mail"
         title="E-Mail"
-        link="mailto:lorenzo@lagoutte.dev"
+        :link="`mailto:${$store.getters.getContact.email}`"
       />
       <DesktopIcon
         icon="Github"
         title="Github"
         link="https://github.com/Telougat"
+      />
+      <DesktopIcon
+        icon="Informations"
+        title="À propos"
+        link="informations"
       />
     </div>
   </div>

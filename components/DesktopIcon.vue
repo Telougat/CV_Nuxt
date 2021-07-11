@@ -1,7 +1,7 @@
 <template>
   <div @click="openLink" @mousedown="startDragging" style="user-select: none;" class="z-20 flex flex-col items-center cursor-pointer text-gray-300 h-20 w-20 lg:h-28 lg:w-28">
     <component class="h-20 w-20" :is="icon"/>
-    <p class="text-center">{{ title }}</p>
+    <p class="text-center font-bold">{{ title }}</p>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import CV from "./icons/CV";
 import Github from "./icons/Github";
 import Mail from "./icons/Mail";
 import UserCircle from "./icons/UserCircle";
+import Informations from "./icons/Informations";
 
 export default {
   name: "DesktopIcon",
@@ -21,7 +22,8 @@ export default {
     CV,
     Github,
     Mail,
-    UserCircle
+    UserCircle,
+    Informations
   },
   props: {
     icon: String,

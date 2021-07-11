@@ -8,27 +8,28 @@ export const state = () => ({
       company: "Mano",
       places: "Le Mans (72)",
       description: "",
-      img: "../assets/mano.png"
+      img: "mano.png"
     },
     {
       job: "Manager (Responsable de zone)",
       date: "2018 - 2019",
       company: "McDonald's",
       places: "Arçonnay (72)",
-      img: "https://img.icons8.com/color/452/mcdonalds.png"
+      img: "mcdonalds.png"
     },
     {
-      job: "Equipier polyvalent",
+      job: "Équipier polyvalent",
       date: "2017 - 2018",
       company: "McDonald's",
       places: "Arçonnay (72)",
-      img: "https://img.icons8.com/color/452/mcdonalds.png"
+      img: "mcdonalds.png"
     },
     {
       job: "Stagiaire",
       date: "Juin 2018",
       company: "Explotation des sources Roxane",
       places: "La Ferrière-Bochard (61)",
+      img: "water.png",
       description: "- Développement Web" +
         "- Déploiement de serveur"
     }
@@ -157,5 +158,8 @@ export const getters = {
   },
   getOtherSkills: (state) => {
     return sortBy(state.skills.other, ['level']).reverse();
+  },
+  getContact: (state) => {
+    return state.contact;
   }
 }
