@@ -57,7 +57,7 @@ export default {
       this.draggingAnimationFrame = requestAnimationFrame(this.drag);
     },
     drag(time) {
-      if (time - this.startTime < 100) { //Check if user is just clicking and no move the icon
+      if (time - this.startTime < 175) { //Check if user is just clicking and no move the icon
         this.draggingAnimationFrame = requestAnimationFrame(this.drag);
         this.validDrag = false;
       }

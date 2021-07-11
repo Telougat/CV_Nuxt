@@ -3,7 +3,7 @@
     <transition name="fadeLate" appear>
       <div class="lg:flex flex-col justify-center h-full pt-6 lg:py-0">
         <div class="w-full text-white font-bold p-4 lg:p-6 lg:flex space-x-8">
-          <div class="flex-shrink-0 w-1/5 hidden lg:block">
+          <div class="flex-shrink-0 w-1/5 hidden lg:block xl:w-1/6">
             <img src="~/assets/lorenzo.jpg" alt="Lorenzo">
           </div>
           <div class="space-y-6 lg:flex flex-col justify-center">
