@@ -130,7 +130,7 @@ export const state = () => ({
         description: ""
       },
       {
-        name: "Source de proposition",
+        name: "Force de proposition",
         level: 5,
         description: ""
       }
