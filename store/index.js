@@ -43,7 +43,7 @@ export const state = () => ({
       description: "Pas encore obtenu"
     },
     {
-      title: "BTS Numériques option informatique et réseaux",
+      title: "BTS Systèmes numériques option informatique et réseaux",
       institution: "Insitution Immaculée Conception",
       date: "2017 - 2019",
       places: "Laval (53)"
