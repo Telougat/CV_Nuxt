@@ -3,45 +3,44 @@ import sortBy from "lodash.sortby";
 export const state = () => ({
   experiences: [
     {
-      job: "Stage",
-      date: "Juin 2018",
-      company: "Explotation des sources Roxane",
-      places: "La Ferrière-Bochard (61)",
-      description: "- Développement Web" +
-        "- Déploiement de serveur"
-    },
-    {
-      job: "Equipier polyvalent",
-      date: "2017 - 2018",
-      company: "McDonald's",
-      places: "Arçonnay (72)"
+      job: "Développeur junior",
+      date: "2019 - 2021",
+      company: "Mano",
+      places: "Le Mans (72)",
+      description: "",
+      img: "mano.png"
     },
     {
       job: "Manager (Responsable de zone)",
       date: "2018 - 2019",
       company: "McDonald's",
       places: "Arçonnay (72)",
+      img: "mcdonalds.png"
     },
     {
-      job: "Développeur junior",
-      date: "2019 - 2021",
-      company: "Mano",
-      places: "Le Mans (72)",
-      description: ""
+      job: "Équipier polyvalent",
+      date: "2017 - 2018",
+      company: "McDonald's",
+      places: "Arçonnay (72)",
+      img: "mcdonalds.png"
+    },
+    {
+      job: "Stagiaire",
+      date: "Juin 2018",
+      company: "Explotation des sources Roxane",
+      places: "La Ferrière-Bochard (61)",
+      img: "water.png",
+      description: "- Développement Web" +
+        "- Déploiement de serveur"
     }
   ],
   formations: [
     {
-      title: "Baccalauréat technologique (Sciences et technologies de l'industrie et du développement durable) option SIN (Systèmes d'information et numérique)",
-      institution: "Lycée Alain",
-      date: "2015 - 2017",
-      places: "Alençon (61)"
-    },
-    {
-      title: "Fondamentaux du leadership de niveau 1",
-      institution: "McDonald's France",
-      date: "Février 2019",
-      places: "Guyancourt (78)"
+      title: "Responsable en ingénierie des logiciels (BAC +4)",
+      institution: "CESI",
+      date: "Depuis 2019",
+      places: "Le Mans (72)",
+      description: "Pas encore obtenu"
     },
     {
       title: "BTS Numériques option informatique et réseaux",
@@ -50,66 +49,92 @@ export const state = () => ({
       places: "Laval (53)"
     },
     {
-      title: "Responsable en ingénierie des logiciels",
-      institution: "CESI",
-      date: "Depuis 2019",
-      places: "Le Mans (72)",
-      description: "Pas encore obtenu"
+      title: "Fondamentaux du leadership de niveau 1",
+      institution: "McDonald's France",
+      date: "Février 2019",
+      places: "Guyancourt (78)"
+    },
+    {
+      title: "Baccalauréat technologique STI2D option SIN",
+      institution: "Lycée Alain",
+      date: "2015 - 2017",
+      places: "Alençon (61)"
     }
   ],
   skills: {
     software: [
       {
         name: "HTML & CSS",
-        level: 10
+        level: 5
       },
       {
         name: "Javascript",
-        level: 9,
+        level: 5,
         description: ""
       },
       {
         name: "Vue Js",
-        level: 9,
+        level: 5,
         description: ""
       },
       {
         name: "Nuxt Js",
-        level: 9,
+        level: 5,
         description: ""
       },
       {
         name: "PHP",
-        level: 9,
+        level: 4,
         description: ""
       },
       {
         name: "SQL",
-        level: 7,
+        level: 4,
         description: ""
       },
       {
         name: "Linux & Windows",
-        level: 8,
+        level: 4,
         description: "Bonne maîtrise de ces deux système d'exploitation"
       },
       {
         name: "C/C++",
-        level: 8,
+        level: 4,
         description: ""
       },
       {
         name: "C#",
-        level: 6,
+        level: 3,
         description: ""
       },
       {
         name: "Suite Microsoft Office",
-        level: 8,
+        level: 4,
         description: ""
       }
     ],
-    other: []
+    other: [
+      {
+        name: "Travail d'équipe",
+        level: 5,
+        description: ""
+      },
+      {
+        name: "Autonomie",
+        level: 5,
+        description: ""
+      },
+      {
+        name: "Rigueur",
+        level: 5,
+        description: ""
+      },
+      {
+        name: "Force de proposition",
+        level: 5,
+        description: ""
+      }
+    ]
   },
   contact: {
     email: "lorenzo@lagoutte.dev",
@@ -129,6 +154,12 @@ export const getters = {
     return state.formations;
   },
   getSoftwareSkills: (state) => {
-    return sortBy(state.skills.software, ['level']);
+    return sortBy(state.skills.software, ['level']).reverse();
+  },
+  getOtherSkills: (state) => {
+    return sortBy(state.skills.other, ['level']).reverse();
+  },
+  getContact: (state) => {
+    return state.contact;
   }
 }

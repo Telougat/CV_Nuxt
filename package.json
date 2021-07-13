@@ -11,7 +11,8 @@
   "dependencies": {
     "core-js": "^3.15.1",
     "lodash.sortby": "^4.7.0",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "nuxt-gsap": "^0.1.4"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.0",

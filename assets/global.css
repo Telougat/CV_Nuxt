@@ -10,3 +10,30 @@ html {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.fadeLate-enter-active, .fadeLate-leave-active {
+  transition: opacity 0.25s;
+  transition-delay: 0.20s;
+}
+.fadeLate-enter, .fadeLate-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.fadeCard-enter-active, .fadeCard-leave-active {
+  transition: opacity 0.5s;
+}
+.fadeCard-enter, .fadeCard-leave-to {
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity .20s
+}
+
+.layout-enter,
+.layout-leave-active {
+  opacity: 0.2
+}
+
+

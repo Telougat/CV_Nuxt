@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
   #main {
-    background-image: url("https://images.unsplash.com/photo-1564944062924-57874442ddea?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=szabo-viktor-_h57ooIvgZ0-unsplash.jpg");
+    background-image: url("~/assets/background.jpg");
     @apply bg-cover bg-center;
   }
   header, footer {
