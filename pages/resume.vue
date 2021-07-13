@@ -45,7 +45,7 @@
                 <p class="w-1/3 bg-gray-600 py-1 px-2 text-white font-bold rounded-lg flex flex-col justify-center">{{ skill.name }}</p>
                 <div class="flex flex-auto items-center">
                   <div class="border border-2 border-gray-600 p-1 w-full">
-                    <div class="h-5 bg-gray-600" :class="skill.level === 5 ? 'w-full' : `w-${skill.level}/5`"></div>
+                    <div class="h-5 bg-gray-600" :style="`width: ${skill.level * 20}%;`"></div>
                   </div>
                 </div>
               </div>
