@@ -155,6 +155,11 @@ export const state = () => ({
         description: ""
       },
       {
+        name: "Organisation",
+        level: 4.5,
+        description: ""
+      },
+      {
         name: "Établir & respecter un cahier des charges",
         level: 4,
         description: ""
