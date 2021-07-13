@@ -111,6 +111,11 @@ export const state = () => ({
         name: "Suite Microsoft Office",
         level: 4,
         description: ""
+      },
+      {
+        name: "Python",
+        level: 2,
+        description: ""
       }
     ],
     other: [
