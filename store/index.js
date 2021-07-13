@@ -116,6 +116,11 @@ export const state = () => ({
         name: "Python",
         level: 2,
         description: ""
+      },
+      {
+        name: "Git",
+        level: 3,
+        description: ""
       }
     ],
     other: [
