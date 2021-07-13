@@ -138,6 +138,21 @@ export const state = () => ({
         name: "Force de proposition",
         level: 5,
         description: ""
+      },
+      {
+        name: "Analyser le besoin",
+        level: 5,
+        description: ""
+      },
+      {
+        name: "Établir & respecter un cahier des charges",
+        level: 4,
+        description: ""
+      },
+      {
+        name: "Gestion de projet",
+        level: 3,
+        description: ""
       }
     ]
   },
