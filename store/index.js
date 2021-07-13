@@ -121,7 +121,12 @@ export const state = () => ({
         name: "Git",
         level: 3,
         description: ""
-      }
+      },
+      {
+        name: "Java / Java EE",
+        level: 2.5,
+        description: ""
+      },
     ],
     other: [
       {
